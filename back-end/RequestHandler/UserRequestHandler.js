@@ -18,7 +18,7 @@ const {sign}=jrk
 export async function adduser(req,res){
     try {
         console.log("Incoming request body:", req.body);
-        const{username,email,password}=req.body
+        const {username,email,password}=req.body
 
         if (!(username &&email && password )) {
             return res.status(400).send({ msg: "Fields are empty" });
